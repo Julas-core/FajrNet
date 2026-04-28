@@ -36,7 +36,7 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build on EAS
-        run: eas build --platform android --profile production --non-interactive --project-id 5f14e49f-843b-4025-9a03-f33c7e5d6eea
+        run: eas build --platform android --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
           EAS_BUILD_NO_EXPO_GO_WARNING: true
