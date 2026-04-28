@@ -26,6 +26,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check EXPO_TOKEN
+        run: |
+          if [ -z "${EXPO_TOKEN}" ]; then
+            echo "EXPO_TOKEN is missing. Add it in GitHub > Settings > Secrets and variables > Actions." >&2
+            exit 1
+          fi
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
       - name: Build on EAS
         run: eas build --platform android --profile production --non-interactive
         env:
