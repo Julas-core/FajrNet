@@ -1,13 +1,15 @@
 {
-  "expo":{
+  "expo": {
     "name": "FajrNet",
-    "slug":"fajrnet",
-    "version":"1.0.0",
-    "orientation":"portrait",
-    "platforms": ["android"],
-    "android":{
-      "package":"com.julas.fajrnet",
-      "permissions":[
+    "slug": "fajrnet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": [
+      "android"
+    ],
+    "android": {
+      "package": "com.julas.fajrnet",
+      "permissions": [
         "BLUETOOTH",
         "BLUETOOTH_ADMIN",
         "BLUETOOTH_SCAN",
@@ -15,17 +17,26 @@
         "BLUETOOTH_ADVERTISE",
         "ACCESS_FINE_LOCATION",
         "FOREGROUND_SERVICE",
-        "RECEIVE_BOOT_COMPLETED"
+        "RECEIVE_BOOT_COMPLETED",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
       ]
     },
-    "plugins":[
+    "plugins": [
       [
         "expo-notifications",
-      {
-        "sounds": ["./assets/azan.mp3"]
-      }
+        {
+          "sounds": [
+            "./assets/azan.mp3"
+          ]
+        }
+      ],
+      "expo-location"
     ],
-    "expo-location"
-    ]
+    "extra": {
+      "eas": {
+        "projectId": "5f14e49f-843b-4025-9a03-f33c7e5d6eea"
+      }
+    }
   }
 }
